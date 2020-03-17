@@ -9,6 +9,7 @@ MAX_COOLDOWN=21600
 MIN_COOLDOWN=60
 CHANNEL_NAME=bot-test
 COMMAND_PREFIX=!
+GAME_NAME=Punishing mods
 ```
 
 # How to add command handlers

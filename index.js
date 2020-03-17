@@ -18,6 +18,7 @@ client.login(process.env.BOT_TOKEN);
 client.once('ready', async () => {
     await models.sequelize.sync();
     console.log('Ready!');
+    await client.user.setActivity(process.env.GAME_NAME);
     await client.channels.find(x => x.name === process.env.CHANNEL_NAME).send("Who's afraid of being banned?");
 });
 
