@@ -20,6 +20,10 @@ class setCooldown extends commandBase
         {
             await msg.channel.send("Cooldown must be >= " + process.env.MIN_COOLDOWN);
             return;
+        } else if (parseInt(newCooldown) > process.env.MAX_COOLDOWN)
+        {
+            await msg.channel.send("Cooldown must be <= " + process.env.MAX_COOLDOWN);
+            return;
         }
         if(userID === '') {
             user.cooldown = parseInt(newCooldown)*1000;
